@@ -1,0 +1,18 @@
+-* Intrduction of Views *-
+-*
+-*    - Views contain the HTML served by your application and separate
+-*      your application from your presentaion logic.
+-*    - Views stored in the views directory.
+-*
+-*    Note : 
+-*       process.cwd()
+-*         process id a node global object
+-*         cwd() return where node is running
+-*      
+-*      app.sendFile()
+-*         Used to transfer the file at given path.
+-*
+-*
+-*
+-*
+-*

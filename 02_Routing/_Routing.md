@@ -1,0 +1,45 @@
+-* Introduction to Routing *-
+-* 
+-* Syntax:
+-*     app.method( path , callback )
+-*     app.method( path , [ callback1, callback2, ...] )
+-*     app.method( path , [ callback1, callback2, ...], callback)
+-*     
+-*     - app is an instance of an express.
+-*     - method is an HTTP request method , in lowercase.
+-*     - path is a path on the server.
+-*     - callback is the function executed when the router is matched.
+-* 
+-*     Method:-
+-* 
+-*     GET     - Retrive Data.
+-*     POST    - Create/Insert Data.
+-*     PUT     - Completely Update Data.
+-*     Patch   - Partially Update Data.
+-*     DELETE  - Delete Data.
+-*     ALL     - All HTTP request method.
+-* 
+-*     Note : app.all(path , callback)
+-*            This method is useful for mapping 'global' logic for specific path
+-*            prefixes or arbitrary matches.
+-*
+-*
+-* Chain Route callback *-
+-*
+-*    Syntax: app.route(path)
+-*    
+-*    - It returns an instance of a single route , which you can  them use the handle
+-*      HTTP verbs with optional middleware.
+-*    - Use app.route() to avoid dublicate route name.
+-*    - We can handle different met with single route using app.route()
+-*    Example:
+-*        app.route('/student')
+-*           .get((req,res) => {
+-*                res.send("All Student")
+-*           })
+-*           .post((req,res) => {
+-*                res.send("Add new Student")
+-*           })
+-*           .put((req,res) => {
+-*                res.send("Update Student")
+-*           })

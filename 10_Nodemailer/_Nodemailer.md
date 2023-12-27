@@ -1,0 +1,37 @@
+-* Introduction to NodeMailer 🤍
+-*     - NodeMailer is a Nodejs module that allow you to end email from your server with ease.
+-*     - Allow east as cake email sending.
+-* 
+-* Nodemailer's API is preety simple and requires us to do following :-
+-*     - Create a 'Transporter' object,
+-*     - Create a 'MailOption' object.
+-*     - Use the 'Transporter.sendMail' method.
+-* 
+-*     To create a Transporter object , we do the following :-
+-*         let transporter = nodemailer.createTransport({
+-*             service: 'gmail',
+-*             auth   : {
+-*                 type : '',
+-*                 user : process.env.MAIL_USERNAME,
+-*                 pass : process.env.MAIL_PASSWORD,
+-*                 clientId : process.env.OATH_CLIENTID,
+-*                 clientSecret : process.env.OATH_CLIENTSECRET,
+-*                 refreshToken : process.env.OATH_REFRESH_TOCKEN
+-*             }
+-*         }) 
+-* 
+-*     Next, We will create the MailOption Object, which holds the detail of where 
+-*     to send the email and with what data.
+-*         let mailOption = {
+-*             from    : '' ,
+-*             to      : '' ,
+-*             subject : '' ,
+-*             text    : '' ,
+-*             html    : '' 
+-*         }
+-* 
+-*     Finally, We will use the sendMail method :-
+-*         transporter.sendMail( mailOption , function(error,data) {
+-*             if(error){ console.log('Error') }
+-*             else { console.log('Email Sent Successfully') }
+-*         })

@@ -1,0 +1,46 @@
+# Node.js
+node_modules/
+**/node_modules/
+npm-debug.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Dependency directories
+jspm_packages/
+typings/
+
+# Debugging, testing, and coverage directories
+coverage/
+lib-cov/
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+# Editor directories
+.vscode/
+.idea/
+
+# Sensitive or environment-specific files
+.env
+.env.local
+.env.*.local
+.env.test
+.env.production
+**/.env
+**/.env.local
+**/.env.*.local
+**/.env.test
+**/.env.production
+
+# Production build files
+build/
